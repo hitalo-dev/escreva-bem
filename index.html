@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Montador de Redação</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="top">
+      <div class="kicker">/montador</div>
+      <h1>Montador de Redação</h1>
+      <p class="sub">Preencha o formulário à esquerda. O texto é montado automaticamente e aparece à direita.</p>
+    </header>
+
+    <div class="layout">
+      <div class="col left">
+        <section class="card">
+          <h2>1) Tema e tese</h2>
+
+          <label for="tema">Tema (o assunto)</label>
+          <input id="tema" placeholder="Ex.: Inclusão digital no Brasil" />
+
+          <label for="problema">Problema (o que está errado)</label>
+          <input id="problema" placeholder="Ex.: desigualdade de acesso à internet" />
+
+          <label for="tese">Tese (sua ideia principal)</label>
+          <input id="tese" placeholder="Ex.: Isso ocorre por X e Y, exigindo ações do Estado e da sociedade." />
+
+          <label for="conectivoIntro">Conectivo de início (introdução)</label>
+          <select id="conectivoIntro">
+            <option>Atualmente,</option>
+            <option>Em primeira análise,</option>
+            <option>É inegável que</option>
+            <option>No cenário contemporâneo,</option>
+          </select>
+        </section>
+
+        <section class="card">
+          <h2>2) Desenvolvimento</h2>
+
+          <label for="conectivoD1">Conectivo do Desenvolvimento 1</label>
+          <select id="conectivoD1">
+            <option>Em primeiro lugar,</option>
+            <option>Primeiramente,</option>
+            <option>De início,</option>
+          </select>
+
+          <label for="arg1">Argumento 1 (causa/explicação)</label>
+          <input id="arg1" placeholder="Ex.: Falta de investimento em infraestrutura" />
+
+          <label for="rep1">Exemplo/Repertório 1</label>
+          <input id="rep1" placeholder="Ex.: dados do IBGE / exemplo de escola sem internet" />
+
+          <hr />
+
+          <label for="conectivoD2">Conectivo do Desenvolvimento 2</label>
+          <select id="conectivoD2">
+            <option>Além disso,</option>
+            <option>Em segundo lugar,</option>
+            <option>Ademais,</option>
+          </select>
+
+          <label for="arg2">Argumento 2</label>
+          <input id="arg2" placeholder="Ex.: Baixa educação digital e desinformação" />
+
+          <label for="rep2">Exemplo/Repertório 2</label>
+          <input id="rep2" placeholder="Ex.: golpes online / uso crítico de fontes" />
+        </section>
+
+        <section class="card">
+          <h2>3) Conclusão (intervenção)</h2>
+
+          <label for="conectivoConc">Conectivo da conclusão</label>
+          <select id="conectivoConc">
+            <option>Portanto,</option>
+            <option>Dessa forma,</option>
+            <option>Assim,</option>
+          </select>
+
+          <label for="agente">Agente (quem vai agir?)</label>
+          <input id="agente" placeholder="Ex.: Governo Federal e empresas de telecomunicação" />
+
+          <label for="acao">Ação (o que vai fazer?)</label>
+          <input id="acao" placeholder="Ex.: ampliar a cobertura de internet e criar centros digitais" />
+
+          <label for="meio">Meio/Como (como vai fazer?)</label>
+          <input id="meio" placeholder="Ex.: com investimentos e parcerias público-privadas" />
+
+          <label for="finalidade">Finalidade (para quê?)</label>
+          <input id="finalidade" placeholder="Ex.: reduzir desigualdades e aumentar oportunidades" />
+        </section>
+      </div>
+
+      <div class="col right">
+        <section class="card sticky">
+          <div class="cardHead">
+            <h2>Texto montado</h2>
+            <div class="actions">
+              <button id="btnCopiar">Copiar</button>
+              <button id="btnLimpar" class="secondary">Limpar</button>
+            </div>
+          </div>
+
+          <textarea id="saida" rows="18" readonly></textarea>
+          <p class="hint">Dica: o texto atualiza automaticamente conforme você muda as opções.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

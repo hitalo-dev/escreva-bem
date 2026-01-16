@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap');
+
+:root {
+  --bg: #f6f3ea;
+  --ink: #111;
+  --paper: #fff;
+  --muted: #666;
+  --stroke: 3px;
+  --radius: 12px;
+  --shadow-x: 4px;
+  --shadow-y: 4px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: 'Patrick Hand', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  letter-spacing: 0.2px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 22px;
+}
+
+.top {
+  margin-bottom: 14px;
+}
+
+.kicker {
+  display: inline-block;
+  font-size: 16px;
+  padding: 2px 10px;
+  border: var(--stroke) solid var(--ink);
+  border-radius: 999px;
+  background: var(--paper);
+  box-shadow: var(--shadow-x) var(--shadow-y) 0 var(--ink);
+  margin-bottom: 10px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1.05;
+}
+
+.sub {
+  margin: 8px 0 0;
+  color: var(--muted);
+  font-size: 18px;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 16px;
+  align-items: start;
+}
+
+@media (max-width: 900px) {
+  .layout { grid-template-columns: 1fr; }
+}
+
+.card {
+  background: var(--paper);
+  border: var(--stroke) solid var(--ink);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-x) var(--shadow-y) 0 var(--ink);
+  padding: 16px;
+  margin: 0 0 16px;
+}
+
+.card h2 {
+  margin: 0 0 12px;
+  font-size: 28px;
+}
+
+label {
+  display: block;
+  margin: 12px 0 6px;
+  font-size: 18px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 2px solid var(--ink);
+  background: #fff;
+  color: var(--ink);
+  font-family: inherit;
+  font-size: 18px;
+  outline: none;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 340px;
+}
+
+input:focus, select:focus, textarea:focus {
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.12);
+}
+
+hr {
+  border: none;
+  border-top: 2px solid rgba(17,17,17,0.35);
+  margin: 16px 0;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+button {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 2px solid var(--ink);
+  background: var(--paper);
+  color: var(--ink);
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 18px;
+  box-shadow: 3px 3px 0 var(--ink);
+}
+
+button:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0 var(--ink);
+}
+
+button.secondary {
+  background: transparent;
+}
+
+.hint {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 16px;
+}
+
+.cardHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.sticky {
+  position: sticky;
+  top: 16px;
+}
+
+@media (max-width: 900px) {
+  .sticky { position: static; }
+}
